@@ -59,9 +59,10 @@ updates:
           - "black"
           - "djlint"
     ignore:
-      - dependency-name: "pylint*"
-        update-types: [ "version-update:semver-major" ]
+      # Breaking change found with v2.15.0 for translations: https://github.com/ONSdigital/eq-questionnaire-runner/pull/1384
       - dependency-name: "babel"
+        update-types: ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "pylint*"
         update-types: [ "version-update:semver-major" ]
       - dependency-name: "pytest*"
         update-types: ["version-update:semver-minor"]
