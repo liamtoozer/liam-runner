@@ -118,7 +118,7 @@ updates:
     directory: "/"
     schedule:
       # interval: "weekly"
-      interval: "weekly"
+      interval: "daily"
       # day: "friday"
       # time: "08:00"
       # timezone: "Europe/London"
