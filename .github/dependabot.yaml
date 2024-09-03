@@ -126,8 +126,8 @@ updates:
     labels:
       - "dependencies"
       - "python"
-    allow:
-      - dependency-type: "production"
+    # allow:
+    #   - dependency-type: "production"
 
     groups:
       production-dependencies:
@@ -135,7 +135,7 @@ updates:
         # patterns:
         #   - "[tool.poetry.dependencies]"
 
-      # development-dependencies:
-      #   dependency-type: "development"
+      development-dependencies:
+        dependency-type: "development"
       #   patterns:
       #     - "pytest*"
