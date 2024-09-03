@@ -1,30 +1,119 @@
+# version: 2
+# updates:
+#   - package-ecosystem: "github-actions"
+#     directory: "/"
+#     schedule:
+#       # interval: "monthly"
+#       interval: "daily"
+#       # day: "friday"
+#       # time: "08:00"
+#       # timezone: "Europe/London"
+#     labels:
+#       - "dependencies"
+#       - "github-actions"
+
+#   - package-ecosystem: "npm"
+#     directory: "/"
+#     schedule:
+#       # interval: "monthly"
+#       interval: "daily"
+#       # day: "friday"
+#       # time: "08:00"
+#       # timezone: "Europe/London"
+#     versioning-strategy: increase-if-necessary
+#     labels:
+#       - "dependencies"
+#       - "node"
+
+#   - package-ecosystem: "pip"
+#     directory: "/"
+#     schedule:
+#       # interval: "weekly"
+#       interval: "daily"
+#       # day: "friday"
+#       # time: "08:00"
+#       # timezone: "Europe/London"
+#     versioning-strategy: increase-if-necessary
+#     labels:
+#       - "dependencies"
+#       - "python"
+#     allow:
+#       - dependency-type: "production"
+
+#   # - package-ecosystem: "pip"
+#   #   directory: "/"
+#   #   schedule:
+#   #     interval: "monthly"
+#   #     # interval: "daily"
+#   #     day: "friday"
+#   #     time: "08:00"
+#   #     timezone: "Europe/London"
+#   #   versioning-strategy: increase-if-necessary
+#   #   labels:
+#   #     - "dependencies"
+#   #     - "python-dev"
+#   #   allow:
+#   #     - dependency-type: "development"
+
+#     groups:
+#       production-dependencies:
+#         dependency-type: "production"
+#         patterns:
+#           - "flask*"
+#           - "google*"
+#           - "python*"
+#           - "colorama"
+#           - "grpcio"
+#           - "gunicorn"
+#           - "pika"
+#           - "pyyaml"
+#           - "requests"
+#           - "sdc-cryptography"
+#           - "structlog"
+#           - "ua-parser"
+#           - "blinker"
+#           - "boto3"
+#           - "humanize"
+#           - "marshmallow"
+#           - "jsonpointer"
+#           - "redis"
+#           - "htmlmin"
+#           - "coloredlogs"
+#           - "uwsgi"
+#           - "email-validator"
+#           - "itsdangerous"
+#           - "simplejson"
+#           - "markupsafe"
+#           - "pdfkit"
+#           - "ordered-set"
+#           - "cachetools"
+#           - "gevent"
+#           - "babel"
+#       development-dependencies:
+#         dependency-type: "development"
+#         patterns:
+#           - "pytest*"
+#           - "flake8*"
+#           - "pylint*"
+#           - "types*"
+#           - "pep8"
+#           - "mock"
+#           - "jsonschema"
+#           - "beautifulsoup4"
+#           - "httmock"
+#           - "moto"
+#           - "freezegun"
+#           - "fakeredis"
+#           - "mypy"
+#           - "responses"
+#           - "playwright"
+#           - "black"
+#           - "djlint"
+
+
+
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      # interval: "monthly"
-      interval: "daily"
-      # day: "friday"
-      # time: "08:00"
-      # timezone: "Europe/London"
-    labels:
-      - "dependencies"
-      - "github-actions"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      # interval: "monthly"
-      interval: "daily"
-      # day: "friday"
-      # time: "08:00"
-      # timezone: "Europe/London"
-    versioning-strategy: increase-if-necessary
-    labels:
-      - "dependencies"
-      - "node"
-
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
@@ -33,79 +122,20 @@ updates:
       # day: "friday"
       # time: "08:00"
       # timezone: "Europe/London"
-    versioning-strategy: increase-if-necessary
+    # versioning-strategy: increase-if-necessary
     labels:
       - "dependencies"
       - "python"
     allow:
       - dependency-type: "production"
 
-  # - package-ecosystem: "pip"
-  #   directory: "/"
-  #   schedule:
-  #     interval: "monthly"
-  #     # interval: "daily"
-  #     day: "friday"
-  #     time: "08:00"
-  #     timezone: "Europe/London"
-  #   versioning-strategy: increase-if-necessary
-  #   labels:
-  #     - "dependencies"
-  #     - "python-dev"
-  #   allow:
-  #     - dependency-type: "development"
-
     groups:
       production-dependencies:
         dependency-type: "production"
         patterns:
-          - "flask*"
-          - "google*"
-          - "python*"
-          - "colorama"
-          - "grpcio"
-          - "gunicorn"
-          - "pika"
-          - "pyyaml"
-          - "requests"
-          - "sdc-cryptography"
-          - "structlog"
-          - "ua-parser"
-          - "blinker"
-          - "boto3"
-          - "humanize"
-          - "marshmallow"
-          - "jsonpointer"
-          - "redis"
-          - "htmlmin"
-          - "coloredlogs"
-          - "uwsgi"
-          - "email-validator"
-          - "itsdangerous"
-          - "simplejson"
-          - "markupsafe"
-          - "pdfkit"
-          - "ordered-set"
-          - "cachetools"
-          - "gevent"
-          - "babel"
+          - "[tool.poetry.dependencies]"
+
       development-dependencies:
         dependency-type: "development"
         patterns:
           - "pytest*"
-          - "flake8*"
-          - "pylint*"
-          - "types*"
-          - "pep8"
-          - "mock"
-          - "jsonschema"
-          - "beautifulsoup4"
-          - "httmock"
-          - "moto"
-          - "freezegun"
-          - "fakeredis"
-          - "mypy"
-          - "responses"
-          - "playwright"
-          - "black"
-          - "djlint"
