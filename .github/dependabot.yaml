@@ -40,7 +40,7 @@ updates:
     allow:
       - dependency-type: "production"
 
-  - package-ecosystem: "pip"
+  - package-ecosystem: "pip-dev"
     directory: "/"
     schedule:
       interval: "monthly"
