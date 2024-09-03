@@ -3,10 +3,11 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
-      day: "friday"
-      time: "08:00"
-      timezone: "Europe/London"
+      # interval: "monthly"
+      interval: "daily"
+      # day: "friday"
+      # time: "08:00"
+      # timezone: "Europe/London"
     labels:
       - "dependencies"
       - "github-actions"
@@ -14,10 +15,11 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "monthly"
-      day: "friday"
-      time: "08:00"
-      timezone: "Europe/London"
+      # interval: "monthly"
+      interval: "daily"
+      # day: "friday"
+      # time: "08:00"
+      # timezone: "Europe/London"
     versioning-strategy: increase-if-necessary
     labels:
       - "dependencies"
@@ -26,10 +28,11 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "08:00"
-      timezone: "Europe/London"
+      # interval: "weekly"
+      interval: "daily"
+      # day: "friday"
+      # time: "08:00"
+      # timezone: "Europe/London"
     versioning-strategy: increase-if-necessary
     labels:
       - "dependencies"
@@ -40,10 +43,11 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
-      interval: "monthly"
-      day: "friday"
-      time: "08:00"
-      timezone: "Europe/London"
+      # interval: "monthly"
+      interval: "daily"
+      # day: "friday"
+      # time: "08:00"
+      # timezone: "Europe/London"
     versioning-strategy: increase-if-necessary
     labels:
       - "dependencies"
