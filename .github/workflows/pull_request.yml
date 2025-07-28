@@ -147,6 +147,8 @@ jobs:
       contents: 'read'
     needs: [python-dependencies, node-dependencies]
     strategy:
+#      max-parallel: 2
+      fail-fast: false
       matrix:
         suite: [ timeout_modal_expired, timeout_modal_extended, timeout_modal_extended_new_window, features, summaries, general, journeys, components, list_collector]
     runs-on: ubuntu-22.04
